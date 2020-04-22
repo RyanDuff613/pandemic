@@ -18,19 +18,22 @@ export class Game {
     this.budget -= amount*1000;
   }
 
+  endGame(){
+    if (this.population <= 0) {
+      alert (`wow, everyone except you is dead! Game over.`);
+    } 
+  }
+
   dayPassing(){
     this.population -= this.infectionRate*100;
     this.budget += this.economy;
     this.day += 1;
+    this.endGame();
   }
 
  
 
-  endGame(){
-    if (this.population <= 0) {
-      return `everyone except you is dead! Game over.`;
-    } 
-  }
+  
 }
 
 export class Player {

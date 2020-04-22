@@ -20,7 +20,6 @@ $(document).ready(function(){
     }
 
     displayData();
-    
 
     $('#moreDistance').click(function(event){
       event.preventDefault();
