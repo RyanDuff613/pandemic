@@ -19,23 +19,19 @@ $(document).ready(function(){
 
     displayData();
 
-    $('#moreDistance').click(function(event){
-      event.preventDefault();
+    $('#moreDistance').click(function(){
       game.changeDistancing(2);
     });
 
-    $('#lessDistance').click(function(event){
-      event.preventDefault();
+    $('#lessDistance').click(function(){
       game.changeDistancing(-1);
     });
 
-    $('#investScience').click(function(event){
-      event.preventDefault();
+    $('#investScience').click(function(){
       game.investDivest(1);
     });
 
-    $('#divestScience').click(function(event){
-      event.preventDefault();
+    $('#divestScience').click(function(){
       game.investDivest(-1);
     });
 
