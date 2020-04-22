@@ -1,5 +1,4 @@
 import { Game } from './businessLogic.js';
-import{ Player } from './businessLogic.js';
 import $ from 'jquery';
 import './styles.css';
 
@@ -8,10 +7,9 @@ $(document).ready(function(){
     event.preventDefault();
 
     let game = new Game();
-    let player = new Player();
-    player.name = $('#userName').val();
+    game.playerName = $('#userName').val();
     function displayData(){
-      $('#player').text(player.name);
+      $('#player').text(game.playerName);
       $('#day').text(game.day);
       $('#infectionRate').text(game.infectionRate);
       $('#population').text(game.population);
@@ -24,35 +22,21 @@ $(document).ready(function(){
     $('#moreDistance').click(function(event){
       event.preventDefault();
       game.changeDistancing(2);
-      game.dayPassing();
-      displayData();
     });
 
     $('#lessDistance').click(function(event){
       event.preventDefault();
       game.changeDistancing(-1);
-      game.dayPassing();
-      displayData();
     });
 
     $('#investScience').click(function(event){
       event.preventDefault();
       game.investDivest(1);
-      game.dayPassing();
-      displayData();
     });
 
     $('#divestScience').click(function(event){
       event.preventDefault();
       game.investDivest(-1);
-      game.dayPassing();
-      displayData();
-    });
-
-    $('#holdTight').click(function(event){
-      event.preventDefault();
-      game.dayPassing();
-      displayData();
     });
 
     setInterval(function(){

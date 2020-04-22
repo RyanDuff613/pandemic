@@ -5,6 +5,7 @@ export class Game {
     this.population = 10000;
     this.budget = 1000000; 
     this.day = 1;
+    this.playerName = "Player 1";
   }
 
   changeDistancing(amount){
@@ -21,7 +22,7 @@ export class Game {
     if (this.population <= 0) {
       this.population = 0;
       location.reload();
-      alert (`wow, everyone except you is dead! Game over.`);
+      alert (`wow, ${this.playerName} everyone except you is dead! Game over.`);
     } 
   }
 
@@ -30,15 +31,5 @@ export class Game {
     this.budget += this.economy;
     this.day += 1;
     this.endGame();
-  }
-
- 
-
-  
-}
-
-export class Player {
-  constructor (name){
-    this.name = name;
   }
 }
