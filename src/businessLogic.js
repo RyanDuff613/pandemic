@@ -15,7 +15,8 @@ export class Game {
 
 
   changeDistancing(){
-    // add code that changes rate of economy, changes rate of infection in instance of game
+    this.economy -= 100;
+    this.infectionRate -= 1;
   }
 
   investDivest(){

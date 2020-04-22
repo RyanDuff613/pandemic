@@ -5,16 +5,33 @@ import './styles.css';
 
 $(document).ready(function(){
   $('#start').click(function(event){
+    event.preventDefault();
+
     let game = new Game();
     let player = new Player();
-    let playerName = $('#userName').val();
-    player.name = playerName;
-    $('#player').text(player.name);
-    $('#day').text(game.day);
-    $('#infectionRate').text(game.infectionRate);
-    $('#population').text(game.population);
-    $('#budget').text(game.budget);
-    $('#economy').text(game.economy);
-    event.preventDefault();
+    player.name = $('#userName').val();
+    function displayData(){
+      $('#player').text(player.name);
+      $('#day').text(game.day);
+      $('#infectionRate').text(game.infectionRate);
+      $('#population').text(game.population);
+      $('#budget').text(game.budget);
+      $('#economy').text(game.economy);
+    }
+
+    $('#moreDistance').click(function(event){
+      event.preventDefault();
+      game.changeDistancing();
+      displayData();
+    });
+  
+    
+
+    game.dayPassing();
+    displayData();
+    
+
+
+    
   });
 });
