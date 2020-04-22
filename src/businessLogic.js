@@ -27,6 +27,7 @@ export class Game {
   }
 
   dayPassing(){
+    this.endGame();
     this.population -= this.infectionRate*100;
     this.budget += this.economy;
     this.day += 1;
