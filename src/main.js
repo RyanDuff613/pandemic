@@ -5,13 +5,16 @@ import './styles.css';
 
 $(document).ready(function(){
   $('#start').click(function(event){
-    event.preventDefault();
     let game = new Game();
     let player = new Player();
-    let someVar = 3;
-    someVar = 3;
-    game.population = 200;
-    player.name = 'andy';
-    $('#population').text('some number'+someVar);
+    let playerName = $('#userName').val();
+    player.name = playerName;
+    $('#player').text(player.name);
+    $('#day').text(game.day);
+    $('#infectionRate').text(game.infectionRate);
+    $('#population').text(game.population);
+    $('#budget').text(game.budget);
+    $('#economy').text(game.economy);
+    event.preventDefault();
   });
 });

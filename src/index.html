@@ -8,14 +8,17 @@
   <body>
     <h2>Welcome to Pandemic</h2>
     <h4>the "too close to home" game that's fun for the whole family!</h4>
-    <form id="buttons">
-      <button type="button" id="start">Start Game</button>
+      <form id="userInput">
+        <input type="text" id="userName" placeholder="enter your name">
+        <button type="submit" id="start">Start Game</button>
+      </form>  
       <button id="moreDistance">Increase Social Distancing Level</button>
       <button id="lessDistance">Decrease Social Distancing Level</button>
       <button id='investScience'>Invest In research</button>
       <button id='diveestScience'>Divest from Research</button>
-    </form>
     <div id='gameMetrics'>
+      <p>President <span id="player"></span> , the nation's vital stats are below:</p>
+      <p>day <span id="day"></span> of pandemic</p>
       <p>infection rate: <span id="infectionRate"></span></p>
       <p>population: <span id="population"></span></p>
       <p>budget: <span id='budget'></span></p>

@@ -1,6 +1,6 @@
 export class Game {
   constructor (){
-    this.infectionLevel = 3;
+    this.infectionRate = 3;
     this.economy = 1000;
     this.population = 10000;
     this.budget = 1000000; 
@@ -8,7 +8,7 @@ export class Game {
   }
 
   dayPassing(){
-    this.population -= this.infectionLevel*100;
+    this.population -= this.infectionRate*100;
     this.budget += this.economy;
     this.day += 1;
   }
