@@ -19,19 +19,25 @@ $(document).ready(function(){
       $('#economy').text(game.economy);
     }
 
-    $('#moreDistance').click(function(event){
-      event.preventDefault();
-      game.changeDistancing();
-      displayData();
-    });
-  
-    
-
-    game.dayPassing();
     displayData();
     
 
+    $('#moreDistance').click(function(event){
+      event.preventDefault();
+      game.changeDistancing(2);
+      game.dayPassing();
+      displayData();
+    });
 
+    $('#lessDistance').click(function(event){
+      event.preventDefault();
+      game.changeDistancing(1);
+      game.dayPassing();
+      displayData();
+    });
+
+    
+    
     
   });
 });

@@ -7,16 +7,16 @@ export class Game {
     this.day = 1;
   }
 
-  dayPassing(){
-    this.population -= this.infectionRate*100;
-    this.budget += this.economy;
+  changeDistancing(amount){
+    this.economy -= amount*100;
+    this.infectionRate -= amount*1;
     this.day += 1;
   }
 
-
-  changeDistancing(){
-    this.economy -= 100;
-    this.infectionRate -= 1;
+  dayPassing(){
+    this.population -= this.infectionRate*100;
+    this.budget += this.economy;
+    this.day += 0;
   }
 
   investDivest(){
