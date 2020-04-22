@@ -13,15 +13,18 @@ export class Game {
     this.day += 1;
   }
 
+  investDivest(amount){
+    this.infectionRate += 1;
+    this.budget -= amount*1000;
+  }
+
   dayPassing(){
     this.population -= this.infectionRate*100;
     this.budget += this.economy;
-    this.day += 0;
+    this.day += 1;
   }
 
-  investDivest(){
-    // add code that 
-  }
+ 
 
   endGame(){
     if (this.population <= 0) {

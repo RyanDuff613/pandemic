@@ -31,7 +31,27 @@ $(document).ready(function(){
 
     $('#lessDistance').click(function(event){
       event.preventDefault();
-      game.changeDistancing(1);
+      game.changeDistancing(-1);
+      game.dayPassing();
+      displayData();
+    });
+
+    $('#investScience').click(function(event){
+      event.preventDefault();
+      game.investDivest(1);
+      game.dayPassing();
+      displayData();
+    });
+
+    $('#divestScience').click(function(event){
+      event.preventDefault();
+      game.investDivest(-1);
+      game.dayPassing();
+      displayData();
+    });
+
+    $('#holdTight').click(function(event){
+      event.preventDefault();
       game.dayPassing();
       displayData();
     });
