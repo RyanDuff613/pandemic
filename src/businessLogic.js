@@ -20,6 +20,7 @@ export class Game {
   endGame(){
     if (this.population <= 0) {
       this.population = 0;
+      location.reload();
       alert (`wow, everyone except you is dead! Game over.`);
     } 
   }
