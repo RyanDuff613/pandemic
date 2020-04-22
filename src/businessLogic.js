@@ -6,6 +6,7 @@ export class Game {
     this.budget = 1000000; 
     this.day = 1;
     this.playerName = "Player 1";
+    this.hoursLeftToday = 24;
   }
 
   changeDistancing(amount){
@@ -27,10 +28,11 @@ export class Game {
   }
 
   dayPassing(){
-    this.endGame();
     this.population -= this.infectionRate*100;
     this.budget += this.economy;
     this.day += 1;
+    this.hoursLeftToday = 24;
     this.endGame();
   }
+  
 }

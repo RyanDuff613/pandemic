@@ -35,10 +35,16 @@ $(document).ready(function(){
       game.investDivest(-1);
     });
 
+    setInterval( ()=> {
+      game.hoursLeftToday -= 1;
+      $('#hoursLeft').text(game.hoursLeftToday);
+    },100);
+
     setInterval(function(){
       game.dayPassing();
       displayData();
-    }, 1000);
+    }, 2400);
+  
     
     
   });
