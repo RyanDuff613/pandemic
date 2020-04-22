@@ -17,8 +17,6 @@ $(document).ready(function(){
       $('#economy').text(game.economy);
     }
 
-    displayData();
-
     $('#moreDistance').click(function(){
       game.changeDistancing(2);
     });
@@ -35,6 +33,8 @@ $(document).ready(function(){
       game.investDivest(-1);
     });
 
+    displayData();
+
     setInterval( ()=> {
       game.hoursLeftToday -= 1;
       $('#hoursLeft').text(game.hoursLeftToday);
@@ -43,9 +43,7 @@ $(document).ready(function(){
     setInterval(function(){
       game.dayPassing();
       displayData();
-    }, 2400);
-  
-    
+    }, 2400); 
     
   });
 });

@@ -5,7 +5,7 @@ export class Game {
     this.population = 10000;
     this.budget = 1000000; 
     this.day = 1;
-    this.playerName = "Player 1";
+    this.playerName = "";
     this.hoursLeftToday = 24;
   }
 
