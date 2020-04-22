@@ -10,7 +10,6 @@ export class Game {
   changeDistancing(amount){
     this.economy -= amount*100;
     this.infectionRate -= amount*1;
-    this.day += 1;
   }
 
   investDivest(amount){
@@ -20,6 +19,7 @@ export class Game {
 
   endGame(){
     if (this.population <= 0) {
+      this.population = 0;
       alert (`wow, everyone except you is dead! Game over.`);
     } 
   }

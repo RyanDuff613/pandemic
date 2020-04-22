@@ -55,7 +55,10 @@ $(document).ready(function(){
       displayData();
     });
 
-    
+    setInterval(function(){
+      game.dayPassing();
+      displayData();
+    }, 1000);
     
     
   });
